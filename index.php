@@ -18,16 +18,17 @@
                 <h4>Login</h4>
                 <div class="username">
                     <i class="fa-solid fa-user-tie"></i>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" placeholder="Username...">
                 </div>
                 <div class="password">
                 <i class="fa-solid fa-lock"></i>
                     
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" placeholder="Password...">
                 </div>
                 <button type="submit">Sign in</button>
                 <br>
-                <a href="#">Forget Your Password?</a>
+                <a href="#">Forget Your Password?</a><br>
+                <a href="#">Signup for free.</a>
             </form>
         </div>
     </div>
