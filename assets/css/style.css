@@ -1,0 +1,12 @@
+section.signinform {padding-top: 30vh;background-color: #00c4ff;height: 100vh;}
+
+button {
+    background-color: #28acec;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+}
