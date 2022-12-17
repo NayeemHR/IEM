@@ -10,7 +10,33 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<h1>welcome</h1>
+<section class="login-section">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            
+            <form action="" method="get" class="login-form">
+                <div class="welcome-logo"><img src="assets/img/logo.jpg" alt=""></div>
+                <h3>Login</h3>
+                <div class="username ">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <input type="text" name="username" id="username" placeholder="Username..." >
+                </div>
+                <div class="password">
+                <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Password..." >
+                </div>
+                <button type="submit">Sign in</button>
+                <ul class="important-links">
+                    <li><a href="#">Forget Your Password?</a></li>
+                    <li><a href="signup.php">Signup for free.</a></li>
+                </ul>
+                
+            </form>
+        </div>
+    </div>
+</div>
+</section>
 
 
 
