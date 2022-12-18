@@ -26,11 +26,17 @@
                 <i class="fa-solid fa-lock"></i>
                     <input type="password" name="password" id="password" placeholder="Password..." >
                 </div>
-                <button type="submit">Sign in</button>
-                <ul class="important-links">
-                    <li><a href="#">Forget Your Password?</a></li>
-                    <li><a href="signup.php">Signup for free.</a></li>
-                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit">Sign in</button>
+                    </div>
+                    <div class="col-md-6 left-border">
+                        <ul class="important-links">
+                            <li><a href="#">Forget Your Password?</a></li>
+                            <li><a href="signup.php">Signup for free.</a></li>
+                        </ul>
+                    </div>
+                </div>
                 
             </form>
         </div>
