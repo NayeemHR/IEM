@@ -1,3 +1,12 @@
+<?php
+session_start();
+$_user_id = $_SESSION['id'] ?? 0;
+if($_user_id){
+    header("Location: dashboard.php");
+}
+include_once "functions.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +24,15 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             
-            <form id="form01"action="tasks.php" method="post" class="signup-form">
+            <form id="form01" action="tasks.php" method="post" class="signup-form">
                 <div class="welcome-logo"><img src="assets/img/logo.jpg" alt=""></div>
-                <h3>Register</h3>
-                <input id="action" type="hidden" name="action" value="register">
-                <div class="fname">
+                <h3>Login</h3>
+                <input id="action" type="hidden" name="action" value="login">
+                <div class="fname hidden" >
                     <i class="fa-solid fa-user-tie"></i>
                     <input type="text" name="fname" id="fname" placeholder="First Name..." >
                 </div>
-                <div class="lname">
+                <div class="lname hidden" >
                     <i class="fa-solid fa-user-tie"></i>
                     <input type="text" name="lname" id="lname" placeholder="Last Name..." >
                 </div>
@@ -37,6 +46,7 @@
                 </div>
                 <?php
                 $status = $_GET['status']??0;
+                
                 if($status>0):
                 ?>
                 <p class="alert alert-<?php if($status == 3){ echo 'success';}else{echo 'danger';}?>" role="alert">
@@ -52,12 +62,11 @@
                 ?>
                 <div class="row">
                     <div class="col-md-6">
-                        <button type="submit" value="submit">Create Account</button>
+                        <button type="submit" value="submit">Submit</button>
                     </div>
                     <div id="btn1" class="col-md-6 left-border">
-                        
-                            <a id="login" href="#">Already have an account.</a>
-                        
+                        <a id="login" class="hidden" href="#">Already have an Account.?</a>
+                        <a id="register" href="#">Create a new account.</a>
                     </div>
                 </div>
                 
