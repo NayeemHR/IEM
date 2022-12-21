@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "config.php";
 
 $status = 0;
@@ -24,7 +25,32 @@ IF(!$connection){
         }else{
             $status = 2;
         }
-        header("Location: signup.php?status={$status}");
+        header("Location: index.php?status={$status}");
+    }elseif('login' == $action){
+        $email = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
+        if($email && $password){
+            $query = "SELECT id, password FROM `users` WHERE email = '{$email}'";
+            $result = mysqli_query($connection, $query);
+            if(mysqli_num_rows($result)>0){
+                $data = mysqli_fetch_assoc($result);
+                $_password = $data['password'];
+                $_id = $data['id'];
+                if(password_verify($password,$_password)){
+                    $_SESSION['id'] = $_id;
+                    header("Location: dashboard.php");
+                    die();
+                }else{
+                    $status = 4;
+                }
+                
+            }else{
+                $status = 5;
+            }
+        }else{
+            $status = 2;
+        }
+        header("Location: index.php?status={$status}");
     }
 }
 

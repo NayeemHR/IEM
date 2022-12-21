@@ -1,6 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 body {
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   color: #8b8a8a;
+}
+
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
 }
 
 section.login-section,
@@ -168,4 +176,54 @@ ul.important-links li {
 
 .hidden{
   display: none;
+}
+
+
+
+/* nav */
+nav.navbar{
+  background-color: #00c4ff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+.nav-link{
+  color: #fff;
+}
+
+nav.navbar img.avatar {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.dropdown-menu[data-bs-popper]{
+  right: 0 ;
+  left: auto;
+}
+
+ul.navbar-nav.me-auto.mb-lg-0 {
+  margin: 0 auto;
+}
+
+li.nav-item {
+  padding: 0px 10px;
+}
+
+button.dropdown.add-btn {
+  margin-right: 70px;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+
+/* footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 20px;
+  width: 100%;
+  color: #fff;
+  background-color: #00c4ff;
 }

@@ -1,21 +1,45 @@
 ;(function($){
     $(document).ready(function(){
         // alert('hello world');
-        $("#btn1 #login").on('click', function(){
+        $("#login").on('click', function(){
             $("#form01 h3").html("Login");
             $("#action").val("login");
-            $("#login a").html("Create a new account.");
-            $("#login").attr("id","register");
+            $(".fname").hide();
+            $(".lname").hide();
+            $("#login").hide();
+            $("#register").show();
             // $("#register").show();
             // this.hide();
             
         });
-        $("#btn1 #register").on('click', function(){
+        $("#register").on('click', function(){
             $("#form01 h3").html("Register");
             $("#action").val("register");
-            $("#register a").html("Already have an account.");
-            $("#register").attr("id","login");
+            $(".fname").show();
+            $(".lname").show();
+            $("#register").hide();
+            $("#login").show();
         });
     })
+    var options = {
+        series: [ 41, 17, 15],
+        chart: {
+        type: 'donut',
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
 })(jQuery);
 
